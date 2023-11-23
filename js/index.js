@@ -1,7 +1,7 @@
 // Get Users for Selection
 getUsersSelection();
 async function getUsersSelection() {
-  const response = await fetch("http://backend.test/api/user/selection", {
+  const response = await fetch("http://backend.test/api/selection", {
     headers: {
       Accept: "application/json",
     },
@@ -177,7 +177,7 @@ const showMessage = async (id) => {
 
     document.querySelector('#message_form input[type="hidden"]').value =
       json.message_id;
-    document.querySelector('#message_form select[name="user_id"]').value =
+    document.querySelector('#message_form input[name="user_id"]').value =
       json.user_id;
     document.querySelector('#message_form textarea[name="message"]').value =
       json.message;
